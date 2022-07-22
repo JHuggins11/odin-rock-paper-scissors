@@ -1,3 +1,5 @@
+// Open the console in index.html and call game() to start
+
 // Format input with the first letter capitalised and the rest in lowercase (for the player's choice)
 function formatInput(text) {
     let length = text.length;
@@ -55,12 +57,15 @@ const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection)); */
 
 // Plays 5 rounds that form a game
-function game(playerSelection, computerSelection) {
+function game() {
     let playerScore = 0;
     let computerScore = 0
 
     for (let i = 0; i < 5; i++) {
         console.log(`Start of Round ${i + 1}`);
+        const playerSelection = prompt("Please enter your choice (rock, paper, scissors).", "rock");
+        const computerSelection = getComputerChoice();
+
         // Result flag (0 = no result, 1 = player wins, 2 = computer wins, 3 = draw)
         let result = playRound(playerSelection, computerSelection);
 
@@ -89,7 +94,3 @@ function game(playerSelection, computerSelection) {
         console.log("The game has ended in a draw!");
     }
 }
-
-const playerSelection = prompt("Please enter your choice (rock, paper, scissors).", "rock");
-const computerSelection = getComputerChoice();
-console.log(game(playerSelection, computerSelection));
