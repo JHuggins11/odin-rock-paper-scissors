@@ -1,5 +1,3 @@
-START
-
 Create function getComputerChoice()
     Return "Rock", "Paper" or "Scissors" with the choice made at random
 
@@ -26,3 +24,27 @@ Create function playRound(params playerSelection, computerSelection)
     Else if playerSelection === "Scissors" AND computerSelection === "Scissors"
         Return "It's a draw! Both of you have picked [playerSelection]!"    
 
+Constant playerSelection = prompt player for their input
+Constant computerSelection = call getComputerChoice()
+Log an instance of playRound(playerSelection, computerSelection) in the console as a test
+
+Create function playGame()
+    Let playerScore = 0;
+    Let computerScore = 0;
+
+    Loop 5 times
+        Print "Round <number>"
+        Call playRound(playerSelection, computerSelection)
+        If player wins round
+            Increment playerScore by 1
+            Print playerScore and computerScore
+        Else if computer wins round
+            Increment computerScore by 1
+            Print playerScore and computerScore
+    
+    If playerScore > computerScore
+        Return "You won the game! Congratulations!"
+    Else if computerScore > playerScore
+        Return "You lost the game! Better luck next time!"
+    Else if playerScore === computerScore
+        Return "The game has ended in a draw!"
