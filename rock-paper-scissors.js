@@ -62,5 +62,25 @@ function game() {
     const playerSelection = prompt("Please enter your choice (rock, paper, scissors).", "rock");
     const computerSelection = getComputerChoice();
 
-    
+    for (let i = 0; i < 5; i++) {
+        console.log(`Start of Round ${i + 1}`);
+        let result = playRound(playerSelection, computerSelection);
+
+        switch (result) {
+            // Player wins
+            case 1:
+                playerScore++;
+                break;
+            // Computer wins
+            case 2:
+                computerScore++;
+                break;
+            // Result is a draw
+            case 3:
+                break;
+        }
+
+        console.log(`End of Round ${i + 1}\n`);
+        console.log(`Player: ${playerScore} | Computer: ${computerScore}`);
+    }
 }
