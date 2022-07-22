@@ -1,0 +1,28 @@
+START
+
+Create function getComputerChoice()
+    Return "Rock", "Paper" or "Scissors" with the choice made at random
+
+Create function playRound(params playerSelection, computerSelection)
+    Let playerSelection = playerSelection in lower case to keep the case of all inputs the same
+
+    // A switch statement would probably work better for this in the actual implementation
+    If playerSelection === "Rock" AND computerSelection === "Paper"
+        Return "You lose! Paper beats Rock!"
+    Else if playerSelection === "Rock" AND computerSelection === "Scissors"
+        Return "You win! Rock beats Scissors!"
+    Else if playerSelection === "Rock" AND computerSelection === "Rock"
+        Return "It's a draw! Both of you have picked [playerSelection]!"
+    Else if playerSelection === "Paper" AND computerSelection === "Rock"
+        Return "You win! Paper beats Rock!"
+    Else if playerSelection === "Paper" AND computerSelection === "Scissors"
+        Return "You lose! Scissors beats Paper!"
+    Else if playerSelection === "Paper" AND computerSelection === "Paper"
+        Return "It's a draw! Both of you have picked [playerSelection]!"
+    Else if playerSelection === "Scissors" AND computerSelection === "Rock"
+        Return "You lose! Rock beats Scissors!"
+    Else if playerSelection === "Scissors" AND computerSelection === "Paper"
+        Return "You win! Scissors beats Paper!"
+    Else if playerSelection === "Scissors" AND computerSelection === "Scissors"
+        Return "It's a draw! Both of you have picked [playerSelection]!"    
+
