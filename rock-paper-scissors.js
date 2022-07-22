@@ -63,6 +63,7 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
         console.log(`Start of Round ${i + 1}`);
+        // TODO: Resolve handling inputs that are outside this range of values
         const playerSelection = prompt("Please enter your choice (rock, paper, scissors).", "rock");
         const computerSelection = getComputerChoice();
 
