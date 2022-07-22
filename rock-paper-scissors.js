@@ -70,14 +70,17 @@ console.log(playRound(playerSelection, computerSelection)); */
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    let isValidInput = false;
+    let isValidInput;
 
     for (let i = 0; i < 5; i++) {
         const computerSelection = getComputerChoice();
-        const playerSelection = promptPlayer();
+        let playerSelection;
+        isValidInput = false;
 
         // If the player's input for their choice is invalid, ask them to enter a valid value
         while (!isValidInput) {
+            playerSelection = promptPlayer();
+
             if (playerSelection === "Invalid") {
                 console.log("Invalid choice. Please write either 'rock', 'paper' or 'scissors'.");
             }
