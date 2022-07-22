@@ -55,11 +55,9 @@ const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection)); */
 
 // Plays 5 rounds that form a game
-function game() {
+function game(playerSelection, computerSelection) {
     let playerScore = 0;
     let computerScore = 0
-    const playerSelection = prompt("Please enter your choice (rock, paper, scissors).", "rock");
-    const computerSelection = getComputerChoice();
 
     for (let i = 0; i < 5; i++) {
         console.log(`Start of Round ${i + 1}`);
@@ -91,3 +89,7 @@ function game() {
         console.log("The game has ended in a draw!");
     }
 }
+
+const playerSelection = prompt("Please enter your choice (rock, paper, scissors).", "rock");
+const computerSelection = getComputerChoice();
+console.log(game(playerSelection, computerSelection));
