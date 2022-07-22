@@ -61,11 +61,6 @@ function playRound(playerSelection, computerSelection) {
     return resultFlag;
 }
 
-/* Test for playRound()
-const playerSelection = "scissors";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection)); */
-
 // Plays 5 rounds that form a game
 function game() {
     let playerScore = 0;
