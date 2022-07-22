@@ -50,7 +50,8 @@ function playRound(playerSelection, computerSelection) {
     return resultFlag;
 }
 
-// Test for playRound()
+/* Test for playRound()
 const playerSelection = "scissors";
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection, computerSelection)); */
+
