@@ -2,7 +2,8 @@ Create function getComputerChoice()
     Return "Rock", "Paper" or "Scissors" with the choice made at random
 
 Create function playRound(params playerSelection, computerSelection)
-    Let playerSelection = playerSelection in lower case to keep the case of all inputs the same
+    Let playerSelection = playerSelection with first letter capitalised and 
+        rest in lower case to keep the case of inputs consistent
 
     // A switch statement would probably work better for this in the actual implementation
     If playerSelection === "Rock" AND computerSelection === "Paper"
