@@ -12,9 +12,9 @@ function getComputerChoice() {
 
 // Plays a round of the game and returns the result
 function playRound(playerSelection, computerSelection) {
-    let hasPlayerWon = false;
-    let isDraw = false;
     playerSelection = formatInput(playerSelection);
+    // An integer indicating the result of a round (1 = player wins, 2 = computer wins, 3 = draw)
+    let resultFlag; 
 
     switch(true) {
         // Player wins
@@ -22,21 +22,21 @@ function playRound(playerSelection, computerSelection) {
         case playerSelection === "Paper" && computerSelection === "Rock":
         case playerSelection === "Scissors" && computerSelection === "Paper":
             console.log(`You win! ${playerSelection} beats ${computerSelection}!`);
-            hasPlayerWon = true;
+            resultFlag = 1;
             break;
         // Computer wins
         case playerSelection === "Rock" && computerSelection === "Paper":
         case playerSelection === "Paper" && computerSelection === "Scissors":
         case playerSelection === "Scissors" && computerSelection === "Rock":
             console.log(`You lose! ${computerSelection} beats ${playerSelection}!`);
-            hasPlayerWon = false;
+            resultFlag = 2;
             break;
         // Result is a draw
         case playerSelection === "Rock" && computerSelection === "Rock":
         case playerSelection === "Paper" && computerSelection === "Paper":
         case playerSelection === "Scissors" && computerSelection === "Scissors":
             console.log(`It's a draw! Both of you used ${computerSelection}!`);
-            isDraw = true;
+            resultFlag = 3;
             break;
         // Player wrote an invalid input as their choice
         default:
