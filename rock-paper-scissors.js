@@ -106,7 +106,7 @@ function game() {
     else if (computerScore > playerScore) {
         console.log("You have lost the game! Better luck next time!");
     }
-    else {
+    else if (playerScore === computerScore) {
         console.log("The game has ended in a draw!");
     }
 }
