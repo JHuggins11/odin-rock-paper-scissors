@@ -56,9 +56,6 @@ function playRound(playerSelection, computerSelection) {
             console.log(`It's a draw! Both of you used ${computerSelection}!`);
             resultFlag = 3;
             break;
-        // Player wrote an invalid input as their choice
-        default:
-            console.log("Invalid choice. Please write either 'rock', 'paper' or 'scissors'.");
     }
 
     return resultFlag;
@@ -76,9 +73,14 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
         console.log(`Start of Round ${i + 1}`);
-        // TODO: Resolve handling inputs that are outside this range of values
-        const playerSelection = prompt("Please enter your choice (rock, paper, scissors).", "rock");
         const computerSelection = getComputerChoice();
+        const playerSelection = promptPlayer();
+
+        // If the player's choice input is invalid, ask them to enter a valid value and exit loop
+        if (playerSelection === "Invalid") {
+            console.log("Invalid choice. Please write either 'rock', 'paper' or 'scissors'.");
+            break;
+        }
 
         // Result flag (0 = no result, 1 = player wins, 2 = computer wins, 3 = draw)
         let result = playRound(playerSelection, computerSelection);
