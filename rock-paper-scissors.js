@@ -69,19 +69,24 @@ console.log(playRound(playerSelection, computerSelection)); */
 // Plays 5 rounds that form a game
 function game() {
     let playerScore = 0;
-    let computerScore = 0
+    let computerScore = 0;
+    let isValidInput = false;
 
     for (let i = 0; i < 5; i++) {
-        console.log(`Start of Round ${i + 1}`);
         const computerSelection = getComputerChoice();
         const playerSelection = promptPlayer();
 
-        // If the player's choice input is invalid, ask them to enter a valid value and exit loop
-        if (playerSelection === "Invalid") {
-            console.log("Invalid choice. Please write either 'rock', 'paper' or 'scissors'.");
-            break;
+        // If the player's input for their choice is invalid, ask them to enter a valid value
+        while (!isValidInput) {
+            if (playerSelection === "Invalid") {
+                console.log("Invalid choice. Please write either 'rock', 'paper' or 'scissors'.");
+            }
+            else {
+                isValidInput = true;
+            }
         }
 
+        console.log(`Start of Round ${i + 1}`);
         // Result flag (0 = no result, 1 = player wins, 2 = computer wins, 3 = draw)
         let result = playRound(playerSelection, computerSelection);
 
