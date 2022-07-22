@@ -63,6 +63,7 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
         console.log(`Start of Round ${i + 1}`);
+        // Result flag (0 = no result, 1 = player wins, 2 = computer wins, 3 = draw)
         let result = playRound(playerSelection, computerSelection);
 
         switch (result) {
@@ -73,9 +74,6 @@ function game() {
             // Computer wins
             case 2:
                 computerScore++;
-                break;
-            // Result is a draw
-            case 3:
                 break;
         }
 
