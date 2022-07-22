@@ -29,7 +29,7 @@ Constant playerSelection = prompt player for their input
 Constant computerSelection = call getComputerChoice()
 Log an instance of playRound(playerSelection, computerSelection) in the console as a test
 
-Create function playGame()
+Create function game()
     Let playerScore = 0;
     Let computerScore = 0;
 
