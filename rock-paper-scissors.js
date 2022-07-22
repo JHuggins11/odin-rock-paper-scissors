@@ -44,7 +44,6 @@ function playRound(playerSelection, computerSelection) {
         // Player wrote an invalid input as their choice
         default:
             console.log("Invalid choice. Please write either 'rock', 'paper' or 'scissors'.");
-            break;
     }
 
     return resultFlag;
