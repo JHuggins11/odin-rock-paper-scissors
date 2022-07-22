@@ -13,8 +13,11 @@ function getComputerChoice() {
 // Plays a round of the game and returns the result
 function playRound(playerSelection, computerSelection) {
     playerSelection = formatInput(playerSelection);
-    // An integer indicating the result of a round (1 = player wins, 2 = computer wins, 3 = draw)
-    let resultFlag; 
+    /* 
+        An integer indicating the result of a round (0 = no result, 1 = player wins, 2 = computer 
+        wins, 3 = draw)
+    */
+    let resultFlag = 0; 
 
     switch(true) {
         // Player wins
