@@ -80,4 +80,14 @@ function game() {
         console.log(`End of Round ${i + 1}\n`);
         console.log(`Player: ${playerScore} | Computer: ${computerScore}`);
     }
+
+    if (playerScore > computerScore) {
+        console.log("You have won the game! Congratulations!");
+    }
+    else if (computerScore > playerScore) {
+        console.log("You have lost the game! Better luck next time!");
+    }
+    else {
+        console.log("The game has ended in a draw!");
+    }
 }
