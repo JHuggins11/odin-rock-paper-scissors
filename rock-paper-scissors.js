@@ -59,6 +59,7 @@ console.log(playRound(playerSelection, computerSelection)); */
 function game() {
     let playerScore = 0;
     let computerScore = 0
+    const playerSelection = prompt("Please enter your choice (rock, paper, scissors).", "rock");
 
     
 }
