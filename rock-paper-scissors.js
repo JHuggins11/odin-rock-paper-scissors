@@ -6,6 +6,20 @@ function formatInput(text) {
     return text.substr(0, 1).toUpperCase() + text.substr(1, length).toLowerCase();
 }
 
+/* 
+    Prompts the player for their choice, formats their input and checks if it's valid. If it's valid,
+    the player's choice is returned, otherwise it will return that it's invalid
+*/
+function promptPlayer() {
+    let input = formatInput(prompt("Please enter your choice (rock, paper, scissors).", "rock"));
+
+    if ((input === "Rock") || (input === "Paper") || (input === "Scissors")) {
+        return input;
+    }
+
+    return "Invalid";
+}
+
 // Randomly chooses an option for the opponent
 function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
