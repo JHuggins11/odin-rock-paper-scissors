@@ -26,14 +26,14 @@ function playRound(playerSelection, computerSelection) {
         case playerSelection === "Rock" && computerSelection === "Scissors":
         case playerSelection === "Paper" && computerSelection === "Rock":
         case playerSelection === "Scissors" && computerSelection === "Paper":
-            console.log(`You win! ${playerSelection} beats ${computerSelection}!`);
+            console.log(`You win! ${playerSelection} beats Computer's ${computerSelection}!`);
             resultFlag = 1;
             break;
         // Computer wins
         case playerSelection === "Rock" && computerSelection === "Paper":
         case playerSelection === "Paper" && computerSelection === "Scissors":
         case playerSelection === "Scissors" && computerSelection === "Rock":
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}!`);
+            console.log(`You lose! Computer used ${computerSelection} that beats ${playerSelection}!`);
             resultFlag = 2;
             break;
         // Result is a draw
