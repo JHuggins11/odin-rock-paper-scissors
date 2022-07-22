@@ -43,6 +43,8 @@ function playRound(playerSelection, computerSelection) {
             console.log("Invalid choice. Please write either 'rock', 'paper' or 'scissors'.");
             break;
     }
+
+    return resultFlag;
 }
 
 
