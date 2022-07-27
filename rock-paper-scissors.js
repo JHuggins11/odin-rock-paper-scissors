@@ -39,12 +39,23 @@ function playRound(playerSelection, computerSelection) {
     return resultFlag;
 }
 
-const btnRock = document.querySelector("#btn-rock");
-const btnPaper = document.querySelector("#btn-paper");
-const btnScissors = document.querySelector("#btn-scissors");
-const results = document.querySelector("#results");
+const container = document.querySelector("#container");
+const gameInfo = document.querySelector("#game-info");
+const buttons = document.querySelectorAll("buttons");
+const resultsSection = document.querySelector("#results");
+let playerScore = 0;
+let computerScore = 0;
 
+const result = document.createElement("p");
+resultsSection.appendChild(result);
 
+const playerScoreText = document.createElement("p");
+playerScoreText.textContent = `Player: ${playerScore}`;
+resultsSection.appendChild(playerScoreText);
+
+const computerScoreText = document.createElement("p");
+computerScoreText.textContent = `Computer: ${computerScore}`;
+resultsSection.appendChild(computerScoreText);
 
 /* let playerScore = 0;
 let computerScore = 0;
