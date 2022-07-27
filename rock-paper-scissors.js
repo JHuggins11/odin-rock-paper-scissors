@@ -1,25 +1,3 @@
-// Open the console in index.html and call game() to start
-
-// Format input with the first letter capitalised and the rest in lowercase (for the player's choice)
-function formatInput(text) {
-    let length = text.length;
-    return text.substr(0, 1).toUpperCase() + text.substr(1, length).toLowerCase();
-}
-
-/* 
-    Prompts the player for their choice, formats their input and checks if it's valid. If it's valid,
-    the player's choice is returned, otherwise it will return that it's invalid
-*/
-function promptPlayer() {
-    let input = formatInput(prompt("Please enter your choice (rock, paper, scissors).", "rock"));
-
-    if ((input === "Rock") || (input === "Paper") || (input === "Scissors")) {
-        return input;
-    }
-
-    return "Invalid";
-}
-
 // Randomly chooses an option for the opponent
 function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
