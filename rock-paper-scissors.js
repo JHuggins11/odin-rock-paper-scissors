@@ -39,6 +39,13 @@ function playRound(playerSelection, computerSelection) {
     return resultFlag;
 }
 
+const btnRock = document.querySelector("#btn-rock");
+const btnPaper = document.querySelector("#btn-paper");
+const btnScissors = document.querySelector("#btn-scissors");
+const results = document.querySelector("#results");
+
+
+
 /* let playerScore = 0;
 let computerScore = 0;
 console.log(`Start of Round ${i + 1}`);
