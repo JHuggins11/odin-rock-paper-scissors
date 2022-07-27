@@ -61,55 +61,18 @@ function playRound(playerSelection, computerSelection) {
     return resultFlag;
 }
 
-// Plays 5 rounds that form a game
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    let isValidInput;
+/* let playerScore = 0;
+let computerScore = 0;
+console.log(`Start of Round ${i + 1}`);
+console.log(`End of Round ${i + 1}\n`);
+console.log(`Player: ${playerScore} | Computer: ${computerScore}`); */
 
-    for (let i = 0; i < 5; i++) {
-        const computerSelection = getComputerChoice();
-        let playerSelection;
-        isValidInput = false;
-
-        // If the player's input for their choice is invalid, ask them to enter a valid value
-        while (!isValidInput) {
-            playerSelection = promptPlayer();
-
-            if (playerSelection === "Invalid") {
-                console.log("Invalid choice. Please write either 'rock', 'paper' or 'scissors'.");
-            }
-            else {
-                isValidInput = true;
-            }
-        }
-
-        console.log(`Start of Round ${i + 1}`);
-        // Result flag (0 = no result, 1 = player wins, 2 = computer wins, 3 = draw)
-        let result = playRound(playerSelection, computerSelection);
-
-        switch (result) {
-            // Player wins
-            case 1:
-                playerScore++;
-                break;
-            // Computer wins
-            case 2:
-                computerScore++;
-                break;
-        }
-
-        console.log(`End of Round ${i + 1}\n`);
-        console.log(`Player: ${playerScore} | Computer: ${computerScore}`);
-    }
-
-    if (playerScore > computerScore) {
-        console.log("You have won the game! Congratulations!");
-    }
-    else if (computerScore > playerScore) {
-        console.log("You have lost the game! Better luck next time!");
-    }
-    else if (playerScore === computerScore) {
-        console.log("The game has ended in a draw!");
-    }
+/* if (playerScore > computerScore) {
+    console.log("You have won the game! Congratulations!");
 }
+else if (computerScore > playerScore) {
+    console.log("You have lost the game! Better luck next time!");
+}
+else if (playerScore === computerScore) {
+    console.log("The game has ended in a draw!");
+} */
