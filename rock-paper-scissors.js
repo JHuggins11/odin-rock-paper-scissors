@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
 
 const container = document.querySelector("#container");
 const gameInfo = document.querySelector("#game-info");
-const buttons = document.querySelectorAll(".game-button");
+const gameButtons = document.querySelectorAll(".game-button");
 const resultsSection = document.querySelector("#results");
 let playerScore = 0;
 let computerScore = 0;
@@ -58,7 +58,9 @@ const btnRestart = document.createElement("button");
 btnRestart.textContent = "Restart";
 container.insertBefore(btnRestart, gameInfo);
 
-buttons.forEach((selectedButton) => {
+
+
+gameButtons.forEach((selectedButton) => {
     selectedButton.addEventListener("click", () => {
         if (playerScore === 5 && computerScore < 5) {
             result.textContent = "You have won the game! Congratulations!";
