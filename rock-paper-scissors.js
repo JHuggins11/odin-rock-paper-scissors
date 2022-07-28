@@ -47,11 +47,11 @@ const result = document.createElement("p");
 resultsSection.appendChild(result);
 
 const playerScoreText = document.createElement("p");
-playerScoreText.textContent = `Player: ${playerScore}`;
+playerScoreText.textContent = "Player: 0";
 resultsSection.appendChild(playerScoreText);
 
 const computerScoreText = document.createElement("p");
-computerScoreText.textContent = `Computer: ${computerScore}`;
+computerScoreText.textContent = "Computer: 0";
 resultsSection.appendChild(computerScoreText);
 
 buttons.forEach((selectedButton) => {
@@ -64,10 +64,12 @@ buttons.forEach((selectedButton) => {
             case 1: // Player wins round
                 result.textContent = `You win! ${playerSelection} beats Computer's ${computerSelection}!`;
                 playerScore++;
+                playerScoreText.textContent = `Player: ${playerScore}`;
                 break;
             case 2: // Player loses round
                 result.textContent = `You lose! Computer used ${computerSelection} that beats ${playerSelection}!`;
                 computerScore++;
+                computerScoreText.textContent = `Computer: ${computerScore}`;
                 break;
             case 3: // Round ends in a draw
                 result.textContent = `It's a draw! Both of you used ${computerSelection}!`;
