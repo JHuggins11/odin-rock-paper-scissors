@@ -56,6 +56,15 @@ resultsSection.appendChild(computerScoreText);
 
 buttons.forEach((selectedButton) => {
     selectedButton.addEventListener("click", () => {
+        if (playerScore === 5 && computerScore < 5) {
+            result.textContent = "You have won the game! Congratulations!";
+            return;
+        }
+        else if (computerScore === 5 && playerScore < 5) {
+            result.textContent = "You have lost the game! Better luck next time!";
+            return;
+        }
+
         let playerSelection = selectedButton.textContent;
         let computerSelection = getComputerChoice();
         let roundResult = playRound(playerSelection, computerSelection);
@@ -77,13 +86,6 @@ buttons.forEach((selectedButton) => {
         }
     });
 });
-
-if (playerScore === 5 && computerScore < 5) {
-    result.textContent = "You have won the game! Congratulations!";
-}
-else if (computerScore === 5 && playerScore < 5) {
-    result.textContent = "You have lost the game! Better luck next time!";
-}
 
 /* let playerScore = 0;
 let computerScore = 0;
