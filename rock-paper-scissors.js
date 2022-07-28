@@ -54,6 +54,10 @@ const computerScoreText = document.createElement("p");
 computerScoreText.textContent = "Computer: 0";
 resultsSection.appendChild(computerScoreText);
 
+const btnRestart = document.createElement("button");
+btnRestart.textContent = "Restart";
+container.insertBefore(btnRestart, gameInfo);
+
 buttons.forEach((selectedButton) => {
     selectedButton.addEventListener("click", () => {
         if (playerScore === 5 && computerScore < 5) {
