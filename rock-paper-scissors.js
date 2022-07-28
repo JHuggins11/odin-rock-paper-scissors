@@ -54,11 +54,17 @@ const computerScoreText = document.createElement("p");
 computerScoreText.textContent = "Computer: 0";
 resultsSection.appendChild(computerScoreText);
 
-const btnRestart = document.createElement("button");
-btnRestart.textContent = "Restart";
-container.insertBefore(btnRestart, gameInfo);
+const btnReset = document.createElement("button");
+btnReset.textContent = "Restart";
+container.insertBefore(btnReset, gameInfo);
 
-
+btnReset.addEventListener("click", () => {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreText.textContent = `Player: ${playerScore}`;
+    computerScoreText.textContent = `Computer: ${computerScore}`;
+    result.textContent = "";
+});
 
 gameButtons.forEach((selectedButton) => {
     selectedButton.addEventListener("click", () => {
